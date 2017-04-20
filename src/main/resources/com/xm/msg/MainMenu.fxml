@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.*?>
+<?import java.lang.*?>
+<?import java.net.URL?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.xm.msg.MenuCtrl" alignment="TOP_LEFT">
+
+  <stylesheets>
+    <URL value="@system.css" />
+  </stylesheets>
+  
+  <MenuBar>
+    <Menu text="function">
+      <MenuItem text="password" onAction="#onMenuPassword"/>
+      <MenuItem text="contacts" onAction="#onContacts"/>
+      <MenuItem text="scope" onAction="#onScope"/>
+    </Menu>
+  </MenuBar>
+
+</VBox>
+

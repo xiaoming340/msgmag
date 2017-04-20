@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xm.msg.scope.ScopeCtrl" alignment="TOP_CENTER">
+
+  <children>
+    <fx:include source="/com/xm/msg/MainMenu.fxml"/>
+    
+    <VBox>
+      <!-- <LineChart fx:id="chart">
+      </LineChart> -->
+    </VBox>
+  </children>
+</VBox>
+

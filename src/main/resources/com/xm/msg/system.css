@@ -1,0 +1,69 @@
+.root {
+     /*-fx-background-image: url("../../background.jpg");*/
+     -fx-background-color: rgb(255,255,255);
+     -fx-font-size: 14px;
+     /*-fx-font-weight: bold;*/
+     -fx-text-fill: #000000;
+     -fx-font-family: "Microsoft YaHei";
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-family: "Microsoft YaHei";
+    /*-fx-font-weight: bold;*/
+    -fx-text-fill: #000000;
+    /*-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );*/
+}
+
+.text-field {
+    -fx-font-size: 14px;
+    -fx-font-family: "Microsoft YaHei";
+    /*-fx-font-weight: bold;*/
+    -fx-text-fill: #000000;
+    -fx-border-width: 50;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-text-fill: #000000;
+}
+
+.table-view {
+    -fx-font-size: 14px;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-text-fill: #000000;
+}
+
+.menu-bar {
+	-fx-use-system-menu-bar: true;
+	-fx-font-size: 6px;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-background-color: rgb(255, 255, 255);
+	-fx-border-width: 1;
+	-fx-border-color: rgb(255, 0, 0);
+	-fx-border-style: none;
+}
+
+.menu {
+	-fx-font-size: 6px;
+    -fx-font-family: "Microsoft YaHei";
+    -fx-border-style: none;
+}
+
+.menu-item {
+	-fx-font-size: 6px;
+    -fx-font-family: "Microsoft YaHei";
+    /*-fx-border-width: 1;
+    -fx-border-color: rgb(255, 0, 0);
+    -fx-border-style: none;*/
+}
+
+#lb_prompt {
+	-fx-font-size: 16px;
+	-fx-font-family: "Microsoft YaHei";
+	-fx-text-fill: rgb(255, 0, 0);
+	/*-fx-border-width: 1;
+	-fx-border-color: rgb(255, 0, 0);*/
+	-fx-fill: FIREBRICK;
+}

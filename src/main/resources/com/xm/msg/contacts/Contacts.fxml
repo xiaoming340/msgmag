@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import application.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xm.msg.contacts.ContactsCtrl" alignment="TOP_CENTER">
+
+  <children>
+    <fx:include source="/com/xm/msg/MainMenu.fxml"/>
+    
+    <HBox>
+      <TableView fx:id="mainTable" prefHeight="1000" onMouseClicked="#onMainTableClicked" onKeyReleased="#onMainTableKeyReleased">
+      <columns>
+        <TableColumn prefWidth="100.0" text="ID">
+          <cellValueFactory>
+            <PropertyValueFactory property="id"/>
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn prefWidth="150.0" text="Name">
+          <cellValueFactory>
+            <PropertyValueFactory property="name"/>
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn prefWidth="300.0" text="Relate">
+          <cellValueFactory>
+            <PropertyValueFactory property="relate"/>
+          </cellValueFactory>
+        </TableColumn>
+      </columns>
+      </TableView>
+      
+      <GridPane alignment="TOP_CENTER" hgap="10.0" vgap="10.0">
+        <padding>
+          <Insets bottom="00.0" left="20.0" right="0.0" top="10.0"/>
+        </padding>
+        <Label text="id"            GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="80"/>
+        <TextField fx:id="tfId"    GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="300"/>
+        <Label text="name"            GridPane.columnIndex="0" GridPane.rowIndex="1" prefWidth="80"/>
+        <TextField fx:id="tfName"     GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="300"/>
+        <Label text="relate"        GridPane.columnIndex="0" GridPane.rowIndex="2" prefWidth="80"/>
+        <TextField fx:id="tfRelate" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="300"/>
+        <Label text="phone"         GridPane.columnIndex="0" GridPane.rowIndex="3" prefWidth="80"/>
+        <TextField fx:id="tfPhone"  GridPane.columnIndex="1" GridPane.rowIndex="3" prefWidth="300"/>
+        <Label text="phone add"         GridPane.columnIndex="0" GridPane.rowIndex="4" prefWidth="80"/>
+        <TextField fx:id="tfPhoneAdd"   GridPane.columnIndex="1" GridPane.rowIndex="4" prefWidth="300"/>
+        <Label text="email"          GridPane.columnIndex="0" GridPane.rowIndex="5" prefWidth="80"/>
+        <TextField fx:id="tfEmail"   GridPane.columnIndex="1" GridPane.rowIndex="5" prefWidth="300"/>
+        <Label text="address"          GridPane.columnIndex="0" GridPane.rowIndex="6" prefWidth="80"/>
+        <TextArea fx:id="taAddress"    GridPane.columnIndex="1" GridPane.rowIndex="6" prefWidth="300" prefHeight="90" wrapText="true"/>
+        <Label text="birth"          GridPane.columnIndex="0" GridPane.rowIndex="7" prefWidth="80"/>
+        <TextField fx:id="tfBirth"   GridPane.columnIndex="1" GridPane.rowIndex="7" prefWidth="300"/>
+        <Label text="QQ"          GridPane.columnIndex="0" GridPane.rowIndex="8" prefWidth="80"/>
+        <TextField fx:id="tfQq"   GridPane.columnIndex="1" GridPane.rowIndex="8" prefWidth="300"/>
+        <Label text="weixin"          GridPane.columnIndex="0" GridPane.rowIndex="9" prefWidth="80"/>
+        <TextField fx:id="tfWeixin"   GridPane.columnIndex="1" GridPane.rowIndex="9" prefWidth="300"/>
+        <Label text="school"         GridPane.columnIndex="0" GridPane.rowIndex="10" prefWidth="80"/>
+        <TextArea fx:id="taSchool"   GridPane.columnIndex="1" GridPane.rowIndex="10" prefWidth="300" prefHeight="90" wrapText="true"/>
+        <Label text="company"         GridPane.columnIndex="0" GridPane.rowIndex="11" prefWidth="80"/>
+        <TextArea fx:id="taCompany"   GridPane.columnIndex="1" GridPane.rowIndex="11" prefWidth="300" prefHeight="90" wrapText="true"/>
+        <VBox                         GridPane.columnIndex="0" GridPane.rowIndex="12" GridPane.columnSpan="2" spacing="10">
+          <HBox alignment="TOP_LEFT" spacing="10">
+            <Button text="show all" prefWidth="90" onAction="#showAll"></Button>
+            <Button text="insert" prefWidth="90" onAction="#insert"></Button>
+            <Button text="update" prefWidth="90" onAction="#update"></Button>
+            <Button text="delete" prefWidth="90" onAction="#delete"></Button>
+          </HBox>
+          <HBox alignment="TOP_RIGHT">
+            <Label fx:id="lb_prompt"></Label>
+          </HBox>
+        </VBox> 
+      </GridPane>
+      
+      <VBox>
+      <GridPane alignment="TOP_CENTER" hgap="10.0" vgap="10.0">
+        <padding>
+          <Insets bottom="00.0" left="20.0" right="0.0" top="10.0"/>
+        </padding>
+        <Label text="identify"          GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="80"/>
+        <TextField fx:id="tfIdentify"   GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="300"/>
+        <Label text="comment"         GridPane.columnIndex="0" GridPane.rowIndex="1" prefWidth="80"/>
+        <TextArea fx:id="taComment"   GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="300" prefHeight="390" wrapText="true"/>
+      </GridPane>
+      <GridPane alignment="TOP_CENTER" hgap="10.0" vgap="10.0">
+        <padding>
+          <Insets bottom="00.0" left="20.0" right="0.0" top="20.0"/>
+        </padding>
+        <Label text="search"          GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="80"/>
+        <Label text="name"                GridPane.columnIndex="0" GridPane.rowIndex="1" prefWidth="80"/>
+        <TextField fx:id="tfSearchName"   GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="200" onKeyReleased="#onSearchNameKeyReleased"/>
+        <Label text="relate"                GridPane.columnIndex="0" GridPane.rowIndex="2" prefWidth="80"/>
+        <TextField fx:id="tfSearchRelate"   GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="200" onKeyReleased="#onSearchRelateKeyReleased"/>
+        <Label text="address"                GridPane.columnIndex="0" GridPane.rowIndex="3" prefWidth="80"/>
+        <TextField fx:id="tfSearchAddress"   GridPane.columnIndex="1" GridPane.rowIndex="3" prefWidth="200" onKeyReleased="#onSearchAddressKeyReleased"/>
+        <Label text="school"                GridPane.columnIndex="0" GridPane.rowIndex="4" prefWidth="80"/>
+        <TextField fx:id="tfSearchSchool"   GridPane.columnIndex="1" GridPane.rowIndex="4" prefWidth="200" onKeyReleased="#onSearchSchoolKeyReleased"/>
+        <Label text="company"                GridPane.columnIndex="0" GridPane.rowIndex="5" prefWidth="80"/>
+        <TextField fx:id="tfSearchCompany"   GridPane.columnIndex="1" GridPane.rowIndex="5" prefWidth="200" onKeyReleased="#onSearchCompanyKeyReleased"/>
+        <Label text="comment"                GridPane.columnIndex="0" GridPane.rowIndex="6" prefWidth="80"/>
+        <TextField fx:id="tfSearchComment"   GridPane.columnIndex="1" GridPane.rowIndex="6" prefWidth="200" onKeyReleased="#onSearchCommentKeyReleased"/>
+      </GridPane>
+      </VBox>
+      
+    </HBox>
+    
+  </children>
+</VBox>
+
